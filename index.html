@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Browser Speech Test</title>
+<link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/speech.js"></script>
+</head>
+<body>
+  <div class="notice"></div>    
+  <div class="wrapper clearfix">
+    <div class="disabed_overlay"></div>
+    <h1>Test HTML5 Speech API</h1>
+    <h3>You have to press <strong>microphone icon</strong> and read the quote word.</h3>
+    <div class="test-zone">
+      <div class="current-word">
+        <p>Speak aloud this word:</p>
+        <p class="current">&ldquo;<span></span>&rdquo;</p>
+      </div>
+      <div class="counter ko">
+        <p>Words KO</p>
+        <span>0</span>
+      </div>    
+      <div class="speech-zone">
+        <span class="help">Click in the microphone to speak</span>
+        <div class="speech-wrapper ">
+          <input type="speech" id="speech" x-webkit-speech="" lang="es">
+        </div>
+      </div>
+      <div class="counter ok">
+        <p>Words OK</p>
+        <span>0</span>
+      </div>   
+    </div>
+
+    <div class="list-of-words">
+      <div class="the-list">
+        <ul></ul>
+        <p><a id="edit-list" href="#">Edit list of words</a></p>
+      </div>
+      <div class="form">
+        <form>
+          <textarea name="words"></textarea>
+          <p>You must write separate the words with commas</p>
+          <button id="update-list" class="button">Update List</button>
+        </form>
+      </div>
+    </div> 
+  </div>
+</body>
+</html>
